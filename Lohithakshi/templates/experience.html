@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Student Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            height: 100vh;
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            z-index: 1000;
+        }
+        nav a {
+            color: #bbb;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background: #444;
+            color: #fff;
+            border-radius: 5px;
+        }
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .content {
+            max-width: 800px;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Experience Section -->
+    <header>
+        <div class="content">
+            <h1>Experience</h1>
+            <ul>
+                <li>Intern at XYZ Company - Gained experience in web development and UI design.</li>
+                <li>Freelance Developer - Worked on multiple projects including e-commerce sites and portfolio pages.</li>
+            </ul>
+        </div>
+    </header>
+
+    <script>
+        // Smooth Scroll Animation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>>
+</body>
+</html>
